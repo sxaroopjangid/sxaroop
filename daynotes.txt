@@ -1,0 +1,27 @@
+DAY 1 (29 July 2025)
+
+Frontend Over
+
+DAY 2 (30 July 2025)
+
+Backend Test
+
+DAY 3 (31 July 2025)
+
+Structure Design
+
+DAY 4 (1 August 2025)
+
+Recreation of live webpages
+
+DAY 5 (2 August 2025)
+
+Finishing whole Frontend
+
+DAY 6 (3 August 2025)
+
+Connecting to Servers & Compass
+
+DAY 7 (4 August 2025)
+
+Render Connecting

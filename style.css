@@ -1,0 +1,245 @@
+/* Created By @SxaroopJangid | Back-End Developer & Creative Coder */
+
+/* RESET & GLOBAL SETUP */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f6f8;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 0;
+}
+
+/* ========================
+   MAIN FORM STYLING
+======================== */
+
+form {
+  background-color: #fff;
+  padding: 30px 40px;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+}
+
+form h2 {
+  text-align: left;
+  margin-bottom: 25px;
+  font-size: 24px;
+}
+
+label {
+  font-size: 14px;
+  color: #333;
+}
+
+/* Input fields */
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 12px;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+/* Checkbox */
+input[type="checkbox"] {
+  margin-right: 8px;
+  transform: scale(1.1);
+}
+
+/* Submit button */
+button[type="submit"] {
+  width: 100%;
+  background-color: #007bff;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+/* ========================
+   SOCIAL SIGNUP STYLING
+======================== */
+
+form p {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  color: #555;
+}
+
+.social-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #fff;
+  color: #333;
+  font-weight: 600;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.social-btn:hover,
+button[type="button"]:hover {
+  background-color: #f0f0f0;
+}
+
+.social-btn .icon {
+  width: 20px;
+  height: 20px;
+}
+
+.social-btn.facebook {
+  border-color: #3b5998;
+  color: #3b5998;
+}
+
+.social-btn.google {
+  border-color: #db4437;
+  color: #db4437;
+}
+
+/* ========================
+   LOGIN BUTTON STYLING
+======================== */
+
+.login-text {
+  text-align: center;
+  margin-top: 20px;
+  color: #555;
+  font-size: 14px;
+}
+
+.login-btn {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  background-color: #e9f0ff;
+  border: 1px solid #007bff;
+  color: #007bff;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.login-btn:hover {
+  background-color: #d1e4ff;
+}
+
+/* ========================
+   RESPONSIVE (Mobile)
+======================== */
+
+@media (max-width: 480px) {
+  form {
+    padding: 25px 20px;
+    width: 90%;
+  }
+}
+
+/* ========================
+   OPTIONAL: LOADER + OTHER PAGES
+======================== */
+
+/* Page Loader */
+#page-loader {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(255,255,255,0.8) url('https://i.imgur.com/LLF5iyg.gif') 
+             center center no-repeat;
+  z-index: 9999;
+  display: none;
+}
+
+/* Page 1: Form Container (if reused) */
+.form-container {
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+  width: 350px;
+  text-align: center;
+}
+
+/* Page 2: Offer Container */
+.offer-container {
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+  width: 400px;
+  text-align: center;
+}
+
+.offer-container h1 {
+  margin-bottom: 10px;
+}
+
+.offer-container p.desc {
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.offer-container img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.offer-container p.price {
+  font-size: 18px;
+  font-weight: bold;
+  color: #007bff;
+  margin-bottom: 15px;
+}
+
+.offer-container input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-bottom: 20px;
+}
+
+.offer-container button {
+  width: 100%;
+  padding: 12px;
+  background: #28a745;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.offer-container button:hover {
+  background: #218838;
+}

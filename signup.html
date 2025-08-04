@@ -1,0 +1,74 @@
+<!-- Created By @SxaroopJangid | Back-End Developer & Creative Coder -->
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Watch now!</title>
+    <!-- Cascading Style Sheet CSS -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="/photos/icon.png" />
+</head>
+
+<!-- Body -->
+<body>
+
+<form action="http://localhost:4000/submit" method="POST">
+
+    <!-- Main Heading of form! -->
+    <h2>Start Watching – Free Registration</h2>
+
+    <!-- First Name and Last Name -->
+    <label for="fname">First Name:</label><br>
+    <input type="text" id="fname" name="fname" required placeholder="Your First Name"><br>
+
+    <label for="lname">Last Name:</label><br>
+    <input type="text" id="lname" name="lname" required placeholder="Your Last Name"><br>
+
+    <!-- Email -->
+    <label for="email">Email Address:</label><br>
+    <input type="email" id="email" name="email" required placeholder="Enter Your Email"><br>
+
+    <!-- Password -->
+    <label for="nickname">Password:</label><br>
+    <input type="password" id="nickname" name="nickname" minlength="6" required placeholder="Password"><br>
+
+    <!-- Terms and Conditions -->
+    <input type="checkbox" id="terms" name="terms" required>
+    <label for="terms"> I agree to the Terms & Conditions</label><br><br>
+
+    <!-- Signup Button -->
+    <button type="submit">Sign Up</button>
+
+    <!-- Social Media Signup -->
+    <p>Or sign up with:</p>
+    
+
+    <!-- Facebook Button -->
+    <button type="button" class="social-btn facebook">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/facebook/facebook-original.svg" alt="Facebook" class="icon">
+        Continue with Facebook
+    </button>
+    
+    <!-- Google Button -->
+    <button type="button" class="social-btn google">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg" alt="Google" class="icon">
+        Continue with Google
+    </button>
+
+    <!-- Error Message -->
+    <p id="error-message" style="color: black; display: none; text-align: center;">
+        This login method is currently unavailable. Please try another option.
+    </p>
+
+    <!-- Existing user login button -->
+    <p class="login-text">Already have an account?</p>
+    <button type="button" class="login-btn" onclick="location.href='login.html'" >Log In to Continue</button>
+
+    <!-- Link JS File -->
+    <script src="script.js"></script>
+</form>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!-- Created By @SxaroopJangid | Back-End Developer & Creative Coder -->
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head -->
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link rel="icon" type="image/png" href="/photos/icon.png" />
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<!-- Body -->
+<body>
+
+<form action="http://localhost:4000/submit" method="POST">
+
+    <!-- Heading -->
+    <h2>Welcome Back – Log In</h2>
+
+    <!-- Email -->
+    <label for="email">Email Address:</label><br>
+    <input type="email" id="email" name="email" required placeholder="Enter Your Email"><br>
+
+    <!-- Password -->
+    <label for="password">Password:</label><br>
+    <input type="password" id="password" name="password" required placeholder="Enter Your Password"><br>
+
+    <!-- Login Button -->
+    <button type="submit">Log In</button>
+
+    <!-- OR Text -->
+    <p>Or continue with:</p>
+
+        <!-- Facebook Button -->
+    <button type="button" class="social-btn facebook">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/facebook/facebook-original.svg" alt="Facebook" class="icon">
+        Continue with Facebook
+    </button>
+    
+    <!-- Google Button -->
+    <button type="button" class="social-btn google">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg" alt="Google" class="icon">
+        Continue with Google
+    </button>
+
+    <!-- Error Message -->
+    <p id="error-message" style="color: black; display: none; text-align: center;">
+        This login method is currently unavailable. Please try another option.
+    </p>
+
+    <!-- Forgot Password -->
+    <p class="login-text" ><a href="/forgot-password.html">Forgot Password?</a></p>
+
+    <!-- Signup Redirect -->
+    <p class="login-text">Don't have an account?</p>
+    <button type="button" class="login-btn" onclick="location.href='signup.html'">Create Account</button>
+
+    <script src="script.js"></script>
+
+  </form>
+</body>
+</html>

