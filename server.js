@@ -12,7 +12,7 @@ app.use(cors());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-// 3.1 MongoDB connect
+// 1. MongoDB connect (only ONCE)
 mongoose.connect(process.env.MONGO_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true
@@ -20,28 +20,22 @@ mongoose.connect(process.env.MONGO_URI, {
 .then(() => console.log('MongoDB connected'))
 .catch(err => console.error('DB Error:', err));
 
-// 3.2 User schema & model
-// const userSchema = new mongoose.Schema({
-//   name:     { type: String, required: true },
-//   email:    { type: String, required: true, unique: true },
-//   password: { type: String, required: true }
-// });
-// const User = mongoose.model('User', userSchema);
-const mongoose = require("mongoose");
-mongoose.connect("mongodb://127.0.0.1:27017/sxaroopdata");
+// 2. Schemas
+const userSchema = new mongoose.Schema({
+  name:     { type: String, required: true },
+  email:    { type: String, required: true, unique: true },
+  password: { type: String, required: true }
+});
+const User = mongoose.model('User', userSchema);
 
 const formSchema = new mongoose.Schema({
   name: String,
   email: String,
   message: String
 });
-
 const FormData = mongoose.model("formdatas", formSchema);
 
-
-// 3.3 Signup route
-app.use(express.urlencoded({ extended: true })); // for form data
-
+// 3. Routes
 app.post("/submit", async (req, res) => {
   const formData = new FormData({
     name: req.body.name,
@@ -52,8 +46,6 @@ app.post("/submit", async (req, res) => {
   res.send("Form data saved successfully!");
 });
 
-
-// 3.4 Login route
 app.post('/api/login', async (req, res) => {
   const { email, password } = req.body;
   const user = await User.findOne({ email, password });
@@ -61,6 +53,6 @@ app.post('/api/login', async (req, res) => {
   return res.status(401).json({ error: 'Invalid credentials' });
 });
 
-// 3.5 Server start
+// 4. Server
 const PORT = process.env.PORT || 4000;
 app.listen(PORT, () => console.log(`Server running on http://localhost:${PORT}`));
